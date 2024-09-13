@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Simulation</title>
+</head>
+<style>
+    .container {
+        height: 60vh;
+        width: 70vw;
+        background-color: black;
+        position: relative;
+    }
+
+    .ball {
+        height: 50px;
+        width: 50px;
+        background-color: rgb(0, 255, 0);
+        border-radius: 50%;
+        position: absolute;
+        animation: animateX 4s linear infinite,animateY 1s ease-out infinite alternate;
+        filter: drop-shadow(20px 0px 3px rgb(0, 120, 0));
+    }
+    @keyframes animateX {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 80%;
+        }
+    }
+
+    @keyframes animateY {
+        from {
+            bottom: 0%;
+        }
+
+        to {
+            bottom: 80%;
+            filter: drop-shadow(20px 100px 5px rgb(0, 90, 0));
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
